@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FMLA Tracking App</title>
+  <link rel="stylesheet" href="fmla-page.css">
+  <script defer src="fmla-exercise.js"></script>
+</head>
+
+<body>
+    <h1 id="app-header">Check Available Time Off for FMLA Leave</h1>
+
+    <div class="tab">
+      <button class="tablinks" onclick="switchTabs(event, 'Check')">Check</button>
+      <button class="tablinks" onclick="switchTabs(event, 'Submit')">Submit</button>
+    </div>
+
+    <div id="Check" class="tabcontent">
+      <h3>Check</h3>
+      <p>Check for Available FMLA Leave.</p>
+      <form id="fmla-check-time-form">
+          <label>Employee Id:</label>
+          <input type="text" name="employeeId" id="employee-id-field" class="check-time-form-field" placeholder="ID"><br>
+          <label>Requested Yr:
+          <input type="text" name="requestYear" id="request-year-field" class="check-time-form-field" placeholder="yyyy"><br>
+          <input type="submit" name="check-time-submit" value="Check" id="check-time-submit">
+      </form>
+    </div>
+    <div id="Submit" class="tabcontent">
+      <h3>Submit</h3>
+      <p>Submit a Request for FMLA Leave.</p>
+      <form id="fmla-request-time-form">
+          <label>Employee Id:</label>
+          <input type="text" name="employeeId" id="employee-id-field" class="check-time-form-field" placeholder="ID"><br>
+          <label>Start Date:</label>
+          <input type="date" name="startDate" id="start-date-field" class="check-time-form-field"><br>
+          <label>End Date:</label>
+          <input type="date" name="endDate" id="end-date-field" class="check-time-form-field"><br>
+          <input type="submit" name="request-time-submit" value="Submit" id="request-time-submit">
+      </form>
+    </div>
+    <br><br>
+
+    <div id="FmlaResults" class="resultgrid">
+
+      <div id="resultHeader" class="results-header"></div>
+      <div id="employeeIdResult"></div>
+      <div id="requestedYearResult"></div>
+      <div id="hoursUsedResult"></div>
+      <div id="hoursAvailableResult"></div>
+    </div>
+
+</body>
+</html>
